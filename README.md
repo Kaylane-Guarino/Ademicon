@@ -23,6 +23,8 @@ Certifique-se de ter o Docker instalado em sua máquina.
 
 Isso criará e executará os containers para o backend, frontend e MongoDB.
 
+Após subir com o docker-compose o frontend demora alguns segundos para funcionar.
+
 Acesse o frontend em `http://localhost:3000` e o backend em `http://localhost:8089`.
 
 ## Uso
