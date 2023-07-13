@@ -8,17 +8,11 @@ Figma: https://www.figma.com/file/KmYSPScdxbieYIIfGjfAvr/Untitled?type=design&no
 
 Antes de começar, certifique-se de ter os seguintes pré-requisitos instalados em sua máquina:
 
-- [VsCode](https://code.visualstudio.com/)
-- [MongoDB](https://www.mongodb.com/)
-- [Node.js](https://nodejs.org/)
-- [React](https://reactjs.org/)
-- [npm](https://www.npmjs.com/)
-- [Yarn](https://yarnpkg.com/)
 - [Docker](https://www.docker.com/)
 
-## Configuração do MongoDB
+## Configuração
 
-Certifique-se de que o MongoDB esteja em execução em sua máquina local ou atualize o arquivo `backend/server.js` com a configuração correta para o seu banco de dados MongoDB remoto.
+Deixei o arquivo .env no repositório de propósito, sei que em um projeto real não deve deixar. No .env já está toda a configuração que precisa.
 
 ## Executando o Projeto com Docker
 
