@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+
+  frontend:
+    build: ./ademicon-fe
+    command: ["yarn", "start"]
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    container_name: ademicon-fe
+    ports:
+      - "3000:3000"
+
+  backend:
+    build: ./ademicon-bff
+    command: ["npm", "run", "dev"]
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    container_name: ademicon-bff
+    ports:
+      - "8089:8089"
+    links:
+      - mongo
+
+  mongo:
+    image: mongo:6-jammy
+    ports:
+      - '27010:27017'
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=root
+      - MONGO_INITDB_DATABASE=ademicondb
+    volumes:
+      - dbdata6:/data/db
+volumes:
+  dbdata6:
