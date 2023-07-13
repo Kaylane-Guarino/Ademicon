@@ -36,8 +36,8 @@ Acesse o frontend em `http://localhost:3000` e o backend em `http://localhost:80
 7. Na listagem temos os dados do cliente que pode ser editado ou deletado ao clicar nos icones a direita da lista.
 8. Por fim temos o botão de logout no final do menu.
 
-### Lembrando que o layout de todo o sistema é responsivo, caso queira testar é só segui os seguintes passos:
+### Lembrando que o layout de todo o sistema é responsivo, caso queira testar é só seguir os seguintes passos:
 
-1. No navegador, na pagina `http://localhost:3000` pressione a tecla `f12`, isso abrirá uma jabela.
+1. No navegador, na pagina `http://localhost:3000` pressione a tecla `f12`, isso abrirá uma janela.
 2. No topo dessa janela, você verá 2 icones e ao lado algumas opções como "Network" e "Console". Clique no segundo icone ao lado de uma seta com um quadrado listrado, um icone que representa um laptop e um celular.
 3. Isso abrirá um ajuste de tela, do lado direito tem uma barra cinza que se você apertar, segurar e arrastar para os lados, ajustará o tamanho da tela. Você pode também adicionar os tamanhos de tela na mão nas opções que tem ao lado de "Dimensions: Responsive".
