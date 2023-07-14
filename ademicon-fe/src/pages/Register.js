@@ -74,7 +74,7 @@ const Register = () => {
 
     return (
         <div className='w-full h-screen flex justify-center items-center bg-[#f0eded]'>
-            <div className='w-full md:w-150 py-[70px] bg-white rounded-md drop-shadow-lg'>
+            <div className='w-full lg:w-150 py-[70px] bg-white rounded-md drop-shadow-lg'>
                 <div className='py-5 flex justify-center items-center mb-7'>
                     <img src={Logo} className="w-52" alt="logo" />
                 </div>
