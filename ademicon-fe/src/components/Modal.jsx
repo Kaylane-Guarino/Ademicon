@@ -79,9 +79,9 @@ const Modal = ({ isOpen, onClose, edit, dataClient, onClientUpdated }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center">
+    <div className="fixed inset-0 flex items-center justify-center z-10">
       <div className="absolute inset-0 bg-black opacity-75"></div>
-      <div className="w-1/2 lg:w-2/2 p-6 rounded shadow z-10 bg-white">
+      <div className="w-full sm:w-1/2 lg:w-2/2 p-6 rounded shadow z-10 bg-white">
         <div className="flex">
           <h2 className="ml-4 w-11/12 text-xl flex justify-center font-bold mb-4">
             {edit ? "Editar cliente" : "Adicionar cliente"}

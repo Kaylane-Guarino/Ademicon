@@ -63,7 +63,7 @@ const Register = () => {
         Promise.resolve(RegisterApi(data))
             .then(resp => {
                 if (resp !== 201) {
-                    Toastify({ text: "Não foi possível realizar o cadastro.", type: "error" });
+                    Toastify({ text: "Email já está em uso.", type: "error" });
                 } else {
                     Toastify({ text: "Cadastro realizado com sucesso!", type: "success" });
                     navigate("/");
