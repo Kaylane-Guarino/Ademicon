@@ -17,21 +17,21 @@ const InitialHome = () => {
   ];
 
   return (
-    <div className="w-full h-full border-2 shadow-md rounded flex flex-col-reverse md:flex-row">
-      <div className="w-full md:w-3/6 h-full flex flex-col items-center justify-center overflow-auto mt-5 md:mt-0">
-        <ol className="w-11/12 h-full list-disc flex flex-col justify-center">
+    <div className="w-full h-full border-2 shadow-md rounded flex flex-col-reverse lg:flex-row">
+      <div className="w-full lg:w-3/6 h-full flex items-center justify-center overflow-auto mt-5 lg:mt-0 bg-red-200">
+        <div className="w-11/12 h-full flex flex-col justify-start overflow-y-auto bg-blue-300">
           {timelineData.map((item, index) => (
             <li className="mb-4" key={index}>
               {item}
             </li>
           ))}
-        </ol>
+        </div>
       </div>
-      <div className="w-full md:w-3/6 flex justify-center items-center">
+      <div className="w-full lg:w-3/6 flex justify-center items-center">
         <img
           src="https://ademicon.com.br/wp-content/themes/ademicon2022/assets/webp/ademicon.webp"
           alt="ademicon"
-          className="rounded h-80 md:h-auto "
+          className="rounded h-80 lg:h-auto"
         />
       </div>
     </div>

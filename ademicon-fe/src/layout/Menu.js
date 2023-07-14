@@ -27,11 +27,11 @@ const Menu = ({ isOpen, toggleMenu, handleOptionClick }) => {
 
   return (
     <div
-      className={`w-4/5 fixed inset-y-0 left-0 md:relative md:w-110 h-full bg-orange-ademicon px-5 ${
-        isOpen ? "" : "invisible md:visible"
+      className={`w-4/5 fixed inset-y-0 left-0 lg:relative lg:w-110 h-full bg-orange-ademicon px-5 z-10 ${
+        isOpen ? "" : "invisible lg:visible"
       }`}
     >
-      <div className="flex justify-end md:hidden bg-white">
+      <div className="flex justify-end lg:hidden bg-white">
         <GrClose className="w-5 h-5 text-black cursor-pointer" onClick={toggleMenu} />
       </div>
       <div className="h-5/7">
@@ -45,9 +45,9 @@ const Menu = ({ isOpen, toggleMenu, handleOptionClick }) => {
           Lista de clientes
         </div>
       </div>
-      <div className="md:h-1/1 flex items-end md:items-center">
-        <p className="h-12 flex items-center cursor-pointer text-white" onClick={logout}>
-          <BiLogOut className="w-4 h-4 mr-2" />
+      <div className="lg:h-1/1 flex items-end lg:items-center">
+        <p className="h-12 flex items-center cursor-pointer font-bold text-white" onClick={logout}>
+          <BiLogOut className="w-6 h-6 mr-2" />
           Logout
         </p>
       </div>

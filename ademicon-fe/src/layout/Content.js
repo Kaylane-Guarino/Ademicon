@@ -4,7 +4,7 @@ import InitialContent from "../components/InitialContent";
 
 const Content = ({ edit, id, selectedOption = "A Ademicon" }) => {
     return (
-        <div className="w-full h-5/7 p-5 bg-white drop-shadow-sm">
+        <div className="w-full h-5/7 p-5 bg-white shadow-sm">
             {selectedOption === "A Ademicon" ? (
                 <InitialContent />
             ) : (

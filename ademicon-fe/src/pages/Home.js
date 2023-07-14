@@ -60,9 +60,9 @@ const Home = () => {
 
   return (
     <div className="w-full h-screen flex">
-      {menuOpen && <div className="fixed md:hidden inset-0 bg-black opacity-75" />}
+      {menuOpen && <div className="fixed lg:hidden inset-0 bg-black opacity-75 z-10" />}
       <Menu isOpen={menuOpen} toggleMenu={toggleMenu} handleOptionClick={handleOptionClick} />
-      <div className={`w-full md:w-3/4 h-full ${menuOpen ? "ml-1/2" : "md:ml-0"}`}>
+      <div className={`w-full lg:w-3/4 h-full ${menuOpen ? "ml-1/2" : "lg:ml-0"}`}>
         <Header setDataOpenModal={openModal} toggleMenu={toggleMenu} isMenuOpen={menuOpen} selectedOption={selectedOption} />
         <Content edit={handleEdit} id={openModal} selectedOption={selectedOption} onClientUpdated={handleClientUpdated} />
       </div>
