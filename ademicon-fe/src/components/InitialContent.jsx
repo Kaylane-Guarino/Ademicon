@@ -18,8 +18,8 @@ const InitialHome = () => {
 
   return (
     <div className="w-full h-full border-2 shadow-md rounded flex flex-col-reverse lg:flex-row">
-      <div className="w-full lg:w-3/6 h-full flex items-center justify-center overflow-auto mt-5 lg:mt-0 bg-red-200">
-        <div className="w-11/12 h-full flex flex-col justify-start overflow-y-auto bg-blue-300">
+      <div className="w-full lg:w-3/6 h-full flex items-center justify-center overflow-auto mt-5 lg:mt-0">
+        <div className="w-11/12 h-full flex flex-col justify-start overflow-y-auto">
           {timelineData.map((item, index) => (
             <li className="mb-4" key={index}>
               {item}
