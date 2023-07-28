@@ -15,19 +15,19 @@ const Register = () => {
     });
     const [showPassword, setShowPassword] = useState(false);
     const handleClickShowPassword = (e) => {
-        e.preventDefault(); // Evita o comportamento padrão do formulário
+        e.preventDefault();
         setShowPassword((show) => !show);
     };
 
     function handleChange(e) {
         const { name, value } = e.target;
-    
+
         // Atualiza o estado do email
         setData((prevState) => ({
             ...prevState,
             [name]: value
         }));
-    
+
         // Valida o email
         if (name === "email" && !validateEmail(value)) {
             Toastify({ text: "Email inválido.", type: "error" });
@@ -52,24 +52,28 @@ const Register = () => {
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return regex.test(email);
     }
-
+    
     function handleRegister(data) {
         if (!validateEmail(data.email)) {
             Toastify({ text: "Email inválido.", type: "error" });
             return;
+        } else if (data.name === "" || data.email === "" || data.password === "") {
+            Toastify({ text: "Todos os campos são obrigatórios.", type: "error" });
+            return;
+        } else {
+            Promise.resolve(RegisterApi(data))
+                .then(resp => {
+                    if (resp !== 201) {
+                        Toastify({ text: "Email já está em uso.", type: "error" });
+                    } else {
+                        Toastify({ text: "Cadastro realizado com sucesso!", type: "success" });
+                        navigate("/");
+                    }
+                })
+                .catch(() => Toastify({ text: "Não foi possível realizar o cadastro.", type: "error" }));
         }
 
 
-        Promise.resolve(RegisterApi(data))
-            .then(resp => {
-                if (resp !== 201) {
-                    Toastify({ text: "Email já está em uso.", type: "error" });
-                } else {
-                    Toastify({ text: "Cadastro realizado com sucesso!", type: "success" });
-                    navigate("/");
-                }
-            })
-            .catch(() => Toastify({ text: "Não foi possível realizar o cadastro.", type: "error" }));
     }
 
     return (
